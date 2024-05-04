@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+# Rewrites all URLS [Replace "example" with the actual domain, without the TLD (.com, .net, .biz, etc)]
+RewriteCond %{HTTP_HOST} ^(rail\.)?yourwebsitedemo\.
+
+# Rewrite all those to insert /folder
+RewriteRule ^(.*)$ /public/$1 [L]
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
